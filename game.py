@@ -24,7 +24,7 @@ def main():
     computer_score = 0
     
     while rounds_played < 3:
-        player_choice = input("Enter 'rock' for 'rock', 'paper' for 'paper', or 'scisors' for 'scissors' (or 'quit' to exit):\n ").lower()
+        player_choice = input("Enter 'rock', 'paper', or 'scissors' to play.(or 'quit' to exit):\n ").lower()
         
         if player_choice == "quit":
             print("Thanks for playing!")
