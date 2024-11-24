@@ -1,20 +1,20 @@
 import random
 
 def get_computer_choice():
-    return random.choice(["r", "p", "s"])
+    return random.choice(["rock", "paper", "scissors"])
 
 def determine_winner(player, computer):
     if player == computer:
         return "tie"
-    elif (player == "r" and computer == "s") or \
-         (player == "p" and computer == "r") or \
-         (player == "s" and computer == "p"):
+    elif (player == "rock" and computer == "scissors") or \
+         (player == "paper" and computer == "rock") or \
+         (player == "scissors" and computer == "paper"):
         return "player"
     else:
         return "computer"
 
 def display_choice(choice):
-    return {"r": "rock", "p": "paper", "s": "scissors"}.get(choice, "unknown")
+    return {"rock": "rock", "paper": "paper", "scissors": "scissors"}.get(choice, "unknown")
 
 def main():
     print("Welcome to Rock-Paper-Scissors!")
@@ -24,12 +24,12 @@ def main():
     computer_score = 0
     
     while rounds_played < 3:
-        player_choice = input("Enter 'r' for 'rock', 'p' for 'paper', or 's' for 'scissors' (or 'q' to exit):\n ").lower()
+        player_choice = input("Enter 'rock' for 'rock', 'paper' for 'paper', or 'scisors' for 'scissors' (or 'quit' to exit):\n ").lower()
         
-        if player_choice == "q":
+        if player_choice == "quit":
             print("Thanks for playing!")
             return
-        elif player_choice not in ["r", "p", "s"]:
+        elif player_choice not in ["rock", "paper", "scissors"]:
             print("Invalid choice. Please try again.")
             continue
         
